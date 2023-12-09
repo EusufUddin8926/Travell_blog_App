@@ -19,7 +19,7 @@ class _Travel_infoState extends State<Travel_info> {
           itemBuilder: (context, index) {
             return Stack(
               fit: StackFit.expand,
-                alignment: AlignmentDirectional.bottomCenter,
+              alignment: AlignmentDirectional.bottomCenter,
               children: [
                 ClipRRect(
                   borderRadius: BorderRadius.circular(20),
@@ -50,16 +50,21 @@ class _Travel_infoState extends State<Travel_info> {
                       ],
                     )),
                 Positioned(
-                  bottom: -25,
+                    bottom: -25,
                     right: 20,
                     child: Container(
-                  width: 50,
-                  height: 50,
-                  decoration: BoxDecoration(color: Colors.red, borderRadius: BorderRadius.circular(50)),
+                      width: 50,
+                      height: 50,
+                      decoration: BoxDecoration(
+                          color: Colors.red,
+                          borderRadius: BorderRadius.circular(50)),
                       child: const Center(
-                        child: Icon(Icons.arrow_right_alt_outlined, color: Colors.white,),
+                        child: Icon(
+                          Icons.arrow_right_alt_outlined,
+                          color: Colors.white,
+                        ),
                       ),
-                ))
+                    ))
               ],
             );
           }),
