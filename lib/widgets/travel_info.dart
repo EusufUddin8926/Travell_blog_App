@@ -54,7 +54,9 @@ class _Travel_infoState extends State<Travel_info> {
             Positioned(
                 right: 15,
                 bottom: 25,
-                child: FloatingActionButton(onPressed: () {}, child: const Icon(Icons.add),)),
+                child: Container(height: 50,width: 50, child: const Icon(Icons.arrow_right_alt_outlined, color: Colors.white,), decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(50), color: Colors.red
+                ),)),
           ],
         );
       },

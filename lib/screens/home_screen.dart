@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:travel_blog_app/widgets/most_popular_travel.dart';
-
-import '../model/travel.dart';
 import '../widgets/travel_info.dart';
 
 class Home_Screen extends StatefulWidget {
