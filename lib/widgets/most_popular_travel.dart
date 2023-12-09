@@ -10,8 +10,6 @@ class Most_Popular_Travel_List extends StatefulWidget {
 class _Most_Popular_Travel_ListState extends State<Most_Popular_Travel_List> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-
-    );
+    return Container();
   }
 }

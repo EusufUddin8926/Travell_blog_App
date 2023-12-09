@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:travel_blog_app/widgets/most_popular_travel.dart';
 
+import '../model/travel.dart';
 import '../widgets/travel_info.dart';
 
 class Home_Screen extends StatefulWidget {
@@ -16,9 +18,9 @@ class _Home_ScreenState extends State<Home_Screen> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0.0,
-        actions: [
+        actions: const [
         Padding(
-          padding: const EdgeInsets.only(right: 12.0),
+          padding: EdgeInsets.only(right: 12.0),
           child: Icon(Icons.menu, size: 30.0,color: Colors.black,),
         )
       ],),
@@ -28,19 +30,34 @@ class _Home_ScreenState extends State<Home_Screen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text("Travel Blog", style: TextStyle(color: Colors.black, fontSize: 30.0, fontWeight: FontWeight.normal),),
-            Expanded(flex: 2,child: Travel_info()),
+            const Text("Travel Blog", style: TextStyle(color: Colors.black, fontSize: 30.0, fontWeight: FontWeight.normal),),
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.45,
+              child: Travel_info(),
+            ),
             Container(
-              margin: EdgeInsets.only(top: 30.0),
-              child: Row(
+              margin: EdgeInsets.only(top: 30.0, bottom: 12),
+              child: const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text("Most Popular", style: TextStyle(color: Colors.black, fontSize: 16, fontWeight: FontWeight.normal),),
-                  Text("View All", style: TextStyle(color: Colors.black, fontSize: 16, fontWeight: FontWeight.normal),),
+                  Text(
+                    "Most Popular",
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 16,
+                        fontWeight: FontWeight.normal),
+                  ),
+                  Text(
+                    "View All",
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 16,
+                        fontWeight: FontWeight.normal),
+                  ),
                 ],
               ),
             ),
-            Expanded(child: Container())
+            const Expanded(child: Most_Popular_Travel_List()),
           ],
         ),
       ),
