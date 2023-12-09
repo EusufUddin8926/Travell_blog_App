@@ -23,7 +23,19 @@ class _Most_Popular_Travel_ListState extends State<Most_Popular_Travel> {
                 borderRadius: BorderRadius.circular(20),
                 child: Image.asset(travel.travelImg,
                     width: 150.0, height: 300.0, fit: BoxFit.cover),
-              )
+              ),
+              Positioned(
+                left: 10,
+                  bottom: 10,
+                  child: Column(
+                children: [
+                  Text(travel.travelName, style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold
+                  ),)
+                ],
+              ))
             ],
           );
         },

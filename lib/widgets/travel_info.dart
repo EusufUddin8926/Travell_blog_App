@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../model/travel.dart';
 
 class Travel_info extends StatefulWidget {
